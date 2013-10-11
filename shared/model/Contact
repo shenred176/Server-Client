@@ -18,6 +18,15 @@ public class Contact {
 		setUrl(null);
 	}
 	
+	/**
+	*Constructor for Contact class
+	*@param id
+	*@param name
+	*@param phone
+	*@param address
+	*@param email
+	*@param url
+	*/
 	public Contact(int id, String name, String phone, String address,
 					String email, String url) {
 		setId(id);
@@ -28,50 +37,62 @@ public class Contact {
 		setUrl(url);
 	}
 	
+	/**ID getter*/
 	public int getId() {
 		return id;
 	}
 	
+	/**ID setter*/
 	public void setId(int id) {
 		this.id = id;
 	}
 	
+	/**Name getter*/
 	public String getName() {
 		return name;
 	}
 	
+	/**Name setter*/
 	public void setName(String name) {
 		this.name = name;
 	}
 	
+	/**Phone getter*/
 	public String getPhone() {
 		return phone;
 	}
 	
+	/**Phone setter*/
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
 	
+	/**Address getter*/
 	public String getAddress() {
 		return address;
 	}
 	
+	/**Address setter*/
 	public void setAddress(String address) {
 		this.address = address;
 	}
 	
+	/**Email getter*/
 	public String getEmail() {
 		return email;
 	}
 	
+	/**Email setter*/
 	public void setEmail(String email) {
 		this.email = email;
 	}
 	
+	/**Url getter*/
 	public String getUrl() {
 		return url;
 	}
 	
+	/**Url setter*/
 	public void setUrl(String url) {
 		this.url = url;
 	}
