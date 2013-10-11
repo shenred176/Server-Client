@@ -20,7 +20,10 @@ public class Contacts {
 	Contacts(Database db) {
 		this.db = db;
 	}
-
+	
+	/**
+	*return the list of Contacts
+	*/
 	public List<Contact> getAll() throws ServerException {	
 
 		logger.entering("server.database.Contacts", "getAll");
@@ -32,7 +35,11 @@ public class Contacts {
 
 		return null;
 	}
-
+	
+	/**
+	*Add contact into database
+	*@param contact
+	*/
 	public void add(Contact contact) throws ServerException {
 
 		logger.entering("server.database.Contacts", "add");
@@ -42,7 +49,11 @@ public class Contacts {
 
 		logger.exiting("server.database.Contacts", "add");
 	}
-
+	
+	/**
+	*Update information about a contact
+	*@param contact
+	*/
 	public void update(Contact contact) throws ServerException {
 
 		logger.entering("server.database.Contacts", "update");
@@ -53,6 +64,10 @@ public class Contacts {
 		logger.exiting("server.database.Contacts", "update");
 	}
 
+	/**
+	*Delete a contact and it's related information
+	*@param contact
+	*/
 	public void delete(Contact contact) throws ServerException {
 
 		logger.entering("server.database.Contacts", "update");
