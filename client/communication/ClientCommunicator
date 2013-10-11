@@ -7,32 +7,45 @@ public class ClientCommunicator {
 
 	public ClientCommunicator() {
 	}
-
+	
+	/**return all the contacts in the database*/
 	public GetAllContacts_Result getAllContacts() throws ClientException {
 		return (GetAllContacts_Result)doGet("/GetAllContacts");
 	}
 	
+	/**
+	*Add new contact into database
+	*@param params - the params that's going to be added
+	**/
 	public void addContact(AddContact_Params params) throws ClientException {
 		doPost("/AddContact", params);
 	}
 	
+	/**
+	*Update a contact's information
+	*@param params - the contact that needs to be updated
+	**/
 	public void updateContact(UpdateContact_Params params) throws ClientException {
 		doPost("/UpdateContact", params);
 	}
 	
+	/**
+	*delete a contact's related information and itself
+	*@param params - the contact that's going to be deleted
+	*/
 	public void deleteContact(DeleteContact_Params params) throws ClientException {
 		doPost("/DeleteContact", params);
 	}
 	
+	/**Make HTTP GET request to the specified URL, and return the object returned by the server*/
 	private Object doGet(String urlPath) throws ClientException {
-		// Make HTTP GET request to the specified URL, 
-		// and return the object returned by the server
+		
 		return null;
 	}
 	
+	/**Make HTTP POST request to the specified URL, passing in the specified postData object*/
 	private void doPost(String urlPath, Object postData) throws ClientException {
-		// Make HTTP POST request to the specified URL, 
-		// passing in the specified postData object
+		
 	}
 
 }
